@@ -12,6 +12,27 @@
     --body: 'Rubik', sans-serif;
 }
 
+.search > img {
+    width: 5%;
+}
+
+header nav {
+    /* style this for how it will look overlapped the main content */
+    /* this element does not have a parent container that is positioned relative, therefore it's positioned in relationship to the browser screen */
+    position: absolute;
+    top: 4.125rem; /* the height of the closed header */
+    left: 0;
+    background-color: var(--lt-seafoam-green);
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+}
+
+.show-nav {
+    max-height: 100vh;
+}
+
 .sr-only {
     position: absolute;
     top: 0;
@@ -19,4 +40,212 @@
     width: 0.1rem;
     height: 0.1rem;
     visibility: hidden;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lt-seafoam-green);
+}
+
+h1 {
+    font-family: var(--headings);
+    font-weight: 300;
+}
+
+.title {
+    font-size: 2rem;
+}
+.title > h2 {
+    font-family: var(--body);
+    margin-left: 2rem;
+}
+
+.toggle-btn {
+    background-color: unset;
+    border: none;
+    outline: none;
+}
+
+.toggle-btn:hover {
+    cursor: pointer;
+}
+
+header a {
+    text-decoration: none;
+    display: block;
+}
+
+header li {
+    list-style-type: none;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.menu > hr {
+    border: 2px solid;
+    border-color: var(--seafoam-green);
+}
+
+input[type="text"] {
+    width: 50%;
+    height: 50%;
+    margin: 0 5rem;
+}
+
+label[for="search"] {
+    display: block;
+    position: absolute;
+    margin-left: 3.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.hero {
+    background-color: var(--md-blue);
+    color: white;
+    font-family: var(--body);
+    padding: 2rem;
+}
+
+.together {
+    background-color: var(--seafoam-green);
+    text-align: center;
+    padding: 0 3rem;
+    margin: 1rem 0;
+}
+
+.view {
+    background-color: unset;
+    color: var(--seafoam-green);
+    border-color: var(--seafoam-green);
+    text-align: center;
+    padding: 0 3rem;
+    margin: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 5rem;
+    overflow-x: scroll;
+}
+
+.our-work{
+    padding: 2rem;
+}
+
+.our-work > h1 {
+    font-size: 4rem;
+}
+
+.card1, .card2 {
+    border-color: var(--white);
+    border-radius: 0.2rem;
+    flex: 0 0 24rem;
+}
+
+.card-body h2 {
+    font-weight: 300;
+    margin-left: 1rem;
+}
+.card1 {
+    background-color: var(--md-blue);
+    color: white;
+}
+
+.card2 {
+    background-color: var(--seafoam-green);
+}
+
+.view-work img, .services img, .who-we-are > h3 img {
+    width: 10%;
+}
+
+.view-work, .services, .who-we-are > h3 {
+    padding: 1rem;
+    border: 2px solid;
+    margin: 3rem 0.25rem;
+}
+
+.bottom-container h2 {
+    color: var(--seafoam-green);
+    margin: 1rem 0.25rem;
+}
+
+.who-we-are {
+    background-color: var(--seafoam-green);
+    padding: 1rem;
+}
+
+footer {
+    background-color: var(--md-blue);
+    color: white;
+}
+
+.offices h1, .subscribe-now h1 {
+    font-weight: 300;
+    margin: 0.5rem;
+}
+
+.offices, .address, .email-us {
+    margin: 1rem;
+}
+
+label[for="email"] {
+    background-color: var(--seafoam-green);
+    color: black;
+}
+
+.disclaimer {
+    background-color: var(--dk-blue);
+}
+
+.icon-container {
+    display: flex;
+}
+
+.icons {
+    margin: 0.5rem;
+    width: 10%;
+    filter: invert();
+}
+
+/* Only do media query 320 and full screen. Just do home page */
+
+@media screen and (min-width: 320px) {
+
+    .hero {
+        font-size: 2rem;
+        padding: 10rem;
+    }
+
+    .wrapper {
+        flex-wrap: wrap;
+    }
+
+    .view-work {
+        width: 20%;
+        margin-left: 80%;
+    }
+
+    .bottom-container {
+        display: flex;
+    }
+
+    .services {
+        width: 10%;
+        margin: auto;
+    }
+
+    .branding {
+        width: 25%;
+        margin: auto;
+    }
 }
